@@ -23,7 +23,7 @@
  * 
 */
 const allSections = document.querySelectorAll("section");
-const navUl = document.getElementById("navbar__list");
+const navUl = document.querySelector("#navbar__list");
 
 /**
  * End Global Variables
