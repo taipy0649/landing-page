@@ -22,7 +22,8 @@
  * Define Global Variables
  * 
 */
-
+const allSections = document.querySelectorAll("section");
+const navUl = document.getElementById("navbar__list");
 
 /**
  * End Global Variables
@@ -39,7 +40,23 @@
 */
 
 // build the nav
+function buildNav() {
+    for (section of allSections) {
+        // get the section name to add link at each section
+        // here is a problem "id"
+        const sectionLink = section.id;
 
+        // get get data-nav to set it between <a>
+        const sectionName = section.dataset.nav;
+
+        // make li elem to add at ul elem
+        const liElem = document.createElement("li");
+        liElem.innerHTML = `<a class="menu__link" href="#${sectionLink}">${sectionName}</a>`
+
+        // add the li elem to ul as a child
+        navUl.appendChild(liElem);
+    }
+}
 
 // Add class 'active' to section when near top of viewport
 
@@ -53,7 +70,8 @@
  * 
 */
 
-// Build menu 
+// Build menu
+buildNav();
 
 // Scroll to section on link click
 
