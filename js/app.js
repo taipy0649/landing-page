@@ -32,9 +32,9 @@ const navUl = document.querySelector("#navbar__list");
 */
 
 // Function to distinguish the section in view
-function isInView(elem) {
+function isInView(section) {
     // get the relative position of section
-    const rect = elem.getBoundingClientRect();
+    const rect = section.getBoundingClientRect();
 
     // get windows height and width
     // to check which section is in view.
@@ -45,6 +45,14 @@ function isInView(elem) {
         rect.top <= 0 &&
         rect.bottom > 0
     );
+}
+
+function addActive(section) {
+    section.classList.add("active");
+}
+
+function removeActive(section) {
+    navUl.classList.remove("active");
 }
 
 
