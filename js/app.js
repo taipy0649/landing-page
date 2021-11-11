@@ -31,6 +31,21 @@ const navUl = document.querySelector("#navbar__list");
  * 
 */
 
+// Function to distinguish the section in view
+function isInView(elem) {
+    // get the relative position of section
+    const rect = elem.getBoundingClientRect();
+
+    // get windows height and width
+    // to check which section is in view.
+    let windowsHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    // write logic with top and bottom.
+    return (
+        rect.top <= 0 &&
+        rect.bottom > 0
+    );
+}
 
 
 /**
