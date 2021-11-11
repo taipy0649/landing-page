@@ -52,7 +52,7 @@ function addActive(section) {
 }
 
 function removeActive(section) {
-    section.className("");
+    section.className = "";
 }
 
 
