@@ -52,7 +52,7 @@ function addActive(section) {
 }
 
 function removeActive(section) {
-    navUl.classList.remove("active");
+    section.classList.remove("active");
 }
 
 
@@ -74,7 +74,7 @@ function buildNav() {
 
         // make li elem to add at ul elem
         const liElem = document.createElement("li");
-        liElem.innerHTML = `<a class="menu__link" href="#${sectionLink}">${sectionName}</a>`
+        liElem.innerHTML = `<a class="menu__link" href="#${sectionLink}">${sectionName}</a>`;
 
         // add the li elem to ul as a child
         navUl.appendChild(liElem);
@@ -82,6 +82,15 @@ function buildNav() {
 }
 
 // Add class 'active' to section when near top of viewport
+function manageActive() {
+    for (const section of allSections) {
+        if (isInView(section)) {
+            addActive(section);
+        } else {
+            removeActive(section);
+        }
+    }
+}
 
 
 // Scroll to anchor ID using scrollTO event
