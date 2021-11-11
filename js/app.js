@@ -52,7 +52,7 @@ function addActive(section) {
 }
 
 function removeActive(section) {
-    section.classList.remove("active");
+    section.className("");
 }
 
 
