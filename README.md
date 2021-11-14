@@ -2,12 +2,25 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Introduction](#Introduction)
+* [Purpose](#Purpose)
+* [Manager](#Manager)
+* [Learn_more](#Learn_more)
 
-## Instructions
+## Introduction
+This is my project for Front End Developer, Landing Page project provided by Udacity.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Purpose
+To improve my skill for Front End. I show you that
+1. building navbar useing JavaScript.
+2. scrolling to the section which is clicked on navbar.
+3. Set active class on the section which is in view.
 
-To get started, open `js/app.js` and start building out the app's functionality
+And, learning how to use Git and GitHub.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Manager
+I am [taipy0649](https://github.com/taipy0649)
+Please visit my profile!
+
+## Learn_more
+About [Udacity](udacity.com)
