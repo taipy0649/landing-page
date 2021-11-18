@@ -24,6 +24,7 @@
 */
 const allSections = document.querySelectorAll("section");
 const navUl = document.querySelector("#navbar__list");
+const allMenu__linkClass = document.getElementsByClassName('menu__link');
 
 /**
  * End Global Variables
