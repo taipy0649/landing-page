@@ -75,7 +75,7 @@ function buildNav() {
 
         // make li elem to add at ul elem
         const liElem = document.createElement("li");
-        liElem.innerHTML = `<a class="menu__link" href="#${sectionLink}">${sectionName}</a>`;
+        liElem.innerHTML = `<a class="menu__link" href="">${sectionName}</a>`;
 
         // add the li elem to ul as a child
         navUl.appendChild(liElem);
@@ -95,7 +95,14 @@ function manageActive() {
 
 
 // Scroll to anchor ID using scrollTO event
-
+function scrollToTargetSection() {
+    for (let index = 0; index < allMenu__linkClass.length; index++) {
+        allMenu__linkClass[index].addEventListener('click', function(event) {
+            event.preventDefault()
+            allSections[index].scrollIntoView({behavior: "smooth"});
+        });
+    }
+}
 
 /**
  * End Main Functions
@@ -107,6 +114,7 @@ function manageActive() {
 buildNav();
 
 // Scroll to section on link click
+scrollToTargetSection();
 
 // Set sections as active
 window.addEventListener("scroll", manageActive);
